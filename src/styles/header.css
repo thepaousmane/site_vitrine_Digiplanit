@@ -1,0 +1,28 @@
+.cl_header{
+width: 1365px;
+height: 95px;
+background-color: grey;
+}
+.logo{
+float: left;
+padding:5px;
+}
+.contain_header_D{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 35px;
+}
+.Acceuil{
+padding-right: 50px;
+}
+.Nos_filiales{
+padding-right: 50px;
+
+}
+.Qui_sommes_nous{
+padding-right: 50px;
+
+}
+.contactez_nous{
+padding-right: 50px;
+}
