@@ -1,0 +1,89 @@
+import '../styles/header.css'
+import logo from '../assets/Logo.jpeg'
+import React from "react";
+import Home from './App'
+import QuiSommesNous from './QuiSommesNous'
+import Filiale from './filiale'
+import Contactez_nous from './Contactez_nous'
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+
+
+function Header(){
+    return(
+        <div className="cl_header"> 
+            <div className="logo">
+                <img src={logo} className="logo" width="230" height="80" alt="logo"/>
+            </div>
+            <div className="contain_header_D">
+                <div className="Acceuil">Acceuil</div>
+                <div className="Nos_filiales">Nos filiales</div>
+                <div className="Qui_sommes_nous">Qui sommes-nous</div>
+                <div className="contactez_nous">contactez-nous</div>
+            </div>
+        </div>  
+)
+}
+
+
+
+
+
+
+
+
+
+
+//code prie depuis https://stackblitz.com/edit/react-cdmtv8?file=src%2FApp.js,src%2Fstyle.css 
+
+import React from 'react';
+
+const App = () => {
+  React.useEffect(() => {
+    const c = document.getElementById('myCanvas');
+    const ctx = c.getContext('2d');
+    ctx.moveTo(0, 50);
+    ctx.lineTo(200, 50);
+    ctx.stroke();
+  }, []);
+
+  //Point quelques part dans le cadre
+  //   const ctx = c.getContext('2d');
+  //   ctx.moveTo(0, 520);
+  //   ctx.lineTo(50, 50);
+  //   ctx.stroke();
+  // }, []);
+
+  //   ctx.moveTo(100, 100);
+  //   ctx.lineTo(100, 0);
+  //   ctx.stroke();
+  // }, []);
+
+  const addPoint = () => {
+    const ctx = document.getElementById('myCanvas').getContext('2d');
+    ctx.beginPath();
+    ctx.arc(100, 50, 10, 0, 2 * Math.PI, false);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#003300';
+    ctx.stroke();
+  };
+
+  return (
+    <div class="canvas">
+      <p>toto</p>
+      <h1>HTML5 Canvas + React.js</h1>
+      <canvas
+        id="myCanvas"
+        width="200"
+        height="100"
+        style={{ border: '1px solid #d3d3d3' }}
+      >
+        Your browser does not support the HTML canvas tag.
+      </canvas>
+      <button onClick={() => addPoint()}>Add Point</button>
+    </div>
+  );
+};
+
+export default App;
